@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="gallery">GALLERY</div>
+            <p>Just a dump of embarassing photos of mine, I don't know why I'm doing this to my self 🙃</p>
+            <div>
+                <ul class="navlist">
+                    <li><a class="tab-links active-links" onclick="opentab('one')">△ One</a></li>
+                    <li><a class="tab-links" onclick="opentab('two')">△△ Two</a></li>
+                    <li><a class="tab-links" onclick="opentab('three')">△△△ Three</a></li>
+                </ul>
+            </div>
+            <div class="tab-contents active-tab" id="one">
+                <div class="column">
+                  <img src="images/ribut.jpeg" alt="" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/sekul1.jpeg" alt="" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/sekul2.jpeg" alt="" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/inisalsa.jpeg" alt="" style="width:100%">
+                </div>
+              </div>
+            <div class="tab-contents" id="two">
+                <div class="column">
+                  <img src="images/inioke.jpeg" alt="" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/biola.jpg" alt="" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/bocah.jpeg" alt="" style="width:100%">
+                </div>
+              </div>
+            <div class="tab-contents" id="three">
+                <div class="column">
+                  <img src="images/ss-an.jpeg" alt="Snow" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/kenapadipost.jpeg" alt="Forest" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/bolang.jpeg" alt="Mountains" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="images/bokur.jpeg" alt="Mountains" style="width:100%">
+                </div>
+              </div>
+        </nav>
+    </header>
+</body>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</html>
